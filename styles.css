@@ -1,0 +1,14 @@
+html, body {
+    background: #2C2F33 !important;
+    color: #99aab5;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+}
+
+a {
+    color: #7289da;
+}
+
+h1, h2 {
+    font-family: 'Roboto Slab', serif;
+}
