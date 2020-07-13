@@ -1,7 +1,7 @@
 document.getElementById('greeting').innerText = setGreeting()
 
 function setGreeting() {
-    let now =new Date().getHours()
+    let now = new Date().getHours()
 
     if (now >= 4 && now <= 11) {
         return 'morning'
