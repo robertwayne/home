@@ -1,18 +1,70 @@
-html, body {
-    background: #2C2F33 !important;
+* {
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+html,
+body {
+    background: #2c2f33;
     color: #99aab5;
     font-family: 'Roboto', sans-serif;
-    font-size: large;
+    font-size: 16pt;
+    height: 100%;
 }
 
 a {
     color: #7289da;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: 'Roboto Slab', serif;
 }
 
 a:hover {
     color: coral;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+header a {
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+main {
+    margin: 40px 10% 0 10%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.section {
+    width: 30%;
+    padding: 10px;
+    border: 1px grey solid;
+    text-align: center;
+}
+
+.section a {
+    padding: 10px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.section h2 {
+    padding-bottom: 5px;
+}
+
+#closing-section {
+    width: 92%;
 }

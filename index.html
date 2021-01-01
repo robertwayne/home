@@ -1,118 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8" />
 
-    <title>Home</title>
-    <meta name="description" content="Home">
-    <meta name="author" content="Rob Wagner">
+        <title>Home</title>
+        <meta name="description" content="Home" />
+        <meta name="author" content="Rob Wagner" />
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.css" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@600&display=swap"
-          rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@600&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-</head>
+    <body>
+        <header class="container">
+            <h1>Good <span id="greeting"></span>, Rob!</h1>
 
-<body>
-<h1 class="text-center">Good <span id="greeting"></span>, Rob!</h1>
-
-<div class="container">
-    <div class="row">
-        <div class="col-lg m-1 text-center">
             <h2>
-                <a href="https://www.google.com/">Google</a> |
-                <a href="https://smile.amazon.com/">Amazon</a> |
+                <a href="https://www.google.com/">Google</a> | <a href="https://smile.amazon.com/">Amazon</a> |
                 <a href="https://docs.google.com/">Docs</a>
             </h2>
-        </div>
-    </div>
+        </header>
 
-    <div class="row">
-        <div class="col-sm border m-3 text-center">
-            <h2>Social Media</h2>
-            <a class="p-2" href="https://youtube.com">YouTube</a>
-            <a class="p-2" href="https://twitter.com/home">Twitter</a>
-            <a class="p-2" href="https://news.ycombinator.com/">HackerNews</a>
-            <a class="p-2" href="https://dev.to/">DEV</a>
-        </div>
-        <div class="col-sm border m-3 text-center">
-            <h2>Programming</h2>
-            <a class="p-2" href="https://github.com/">GitHub</a>
-            <a class="p-2" href="https://crates.io/">Crates.io</a>
-            <a class="p-2" href="https://pypi.org/">PyPi</a>
-            <a class="p-2" href="https://yarnpkg.com/">Yarn</a>
-        </div>
-        <div class="col-sm border m-3 text-center">
-            <h2>Docs</h2>
-            <a class="p-2" href="https://docs.python.org/3/">Python</a>
-            <a class="p-2" href="https://doc.rust-lang.org/std/index.html">Rust</a>
-            <a class="p-2" href="https://developer.mozilla.org/en-US/">MDN</a>
-            <a class="p-2" href="https://docs.microsoft.com/en-us/">MSDN</a>
-        </div>
-    </div>
+        <main class="container">
+            <div class="section">
+                <h2>Social Media</h2>
+                <a href="https://youtube.com">YouTube</a>
+                <a href="https://twitter.com/home">Twitter</a>
+                <a href="https://news.ycombinator.com/">HackerNews</a>
+                <a href="https://dev.to/">DEV</a>
+            </div>
 
-    <div class="row">
-        <div class="col-sm border m-3 text-center">
-            <h2>Engineering</h2>
-            <a class="p-2" href="https://www.adafruit.com/">Adafruit</a>
-            <a class="p-2" href="https://www.sparkfun.com/">Sparkfun</a>
-            <a class="p-2" href="https://www.aliexpress.com/">Aliexpress</a>
+            <div class="section">
+                <h2>Programming</h2>
+                <a href="https://github.com/">GitHub</a>
+                <a href="https://crates.io/">Crates.io</a>
+                <a href="https://pypi.org/">PyPi</a>
+                <a href="https://yarnpkg.com/">Yarn</a>
+            </div>
 
-        </div>
-        <div class="col-sm border m-3 text-center">
-            <h2>Blogs</h2>
-            <a class="p-2" href="https://blog.discord.com/tagged/engineering">Discord Engineering</a>
-            <a class="p-2" href="https://gafferongames.com/">Gaffer On Games</a>
-            <a class="p-2" href="https://simple-veganista.com/">Simple Veganista</a>
-            <a class="p-2" href="https://www.tropicaltidbits.com/">Tropical Tidbits</a>
-        </div>
-        <div class="col-sm border m-3 text-center">
-            <h2>Game Dev</h2>
-            <a class="p-2" href="https://itch.io/game-assets">Itch.io Assets</a>
-            <a class="p-2" href="https://lospec.com/">Lospec Color Palette</a>
-        </div>
-    </div>
+            <div class="section">
+                <h2>Docs</h2>
+                <a href="https://docs.python.org/3/">Python</a>
+                <a href="https://doc.rust-lang.org/std/index.html">Rust</a>
+                <a href="https://developer.mozilla.org/en-US/">MDN</a>
+                <a href="https://docs.microsoft.com/en-us/">MSDN</a>
+            </div>
 
-    <div class="row">
-        <div class="col-sm border m-3 text-center">
-            <h2>Hosting</h2>
-            <a class="p-2" href="https://galaxygate.net/">Galaxy Gate</a>
-            <a class="p-2" href="https://www.digitalocean.com/">Digital Ocean</a>
-            <a class="p-2" href="https://www.name.com/">Name.com</a>
-            <a class="p-2" href="https://www.namecheap.com/">NameCheap</a>
-        </div>
-        <div class="col-sm border m-3 text-center">
-            <h2>Software</h2>
-            <a class="p-2" href="https://www.jetbrains.com/">JetBrains</a>
-            <a class="p-2" href="https://chocolatey.org/">Chocolatey</a>
-            <a class="p-2" href="https://www.bfxr.net/">Bfxr</a>
-            <a class="p-2" href="https://www.gitkraken.com/">GitKraken</a>
-            <a class="p-2" href="https://www.getblackbird.net/">Blackbird</a>
-            <a class="p-2" href="https://ankiweb.net/decks/">Anki</a>
-            <a class="p-2" href="https://www.strava.com/">Strava</a>
-        </div>
-        <div class="col-sm border m-3 text-center">
-            <h2>Learning</h2>
-            <a class="p-2" href="https://www.khanacademy.org/">Khan Academy</a>
-            <a class="p-2" href="https://www.patreon.com/japaneseammo/posts">Misa (Japanese)</a>
-        </div>
-    </div>
+            <div class="section">
+                <h2>Engineering</h2>
+                <a href="https://www.adafruit.com/">Adafruit</a>
+                <a href="https://www.sparkfun.com/">Sparkfun</a>
+                <a href="https://www.aliexpress.com/">Aliexpress</a>
+            </div>
 
-    <div class="row">
-        <div class="col-sm border m-3 text-center">
-            <h2>Other</h2>
-            <a class="p-2" href="https://fonts.google.com/">Google Fonts</a>
-            <a class="p-2" href="https://fontpair.co/">FontPair</a>
-            <a class="p-2" href="https://css-tricks.com/">CSS Tricks</a>
-            <a class="p-2" href="https://app.gitkraken.com/glo/">Glo Board</a>
-        </div>
-    </div>
-</div>
+            <div class="section">
+                <h2>Blogs</h2>
+                <a href="https://gafferongames.com/">Gaffer On Games</a>
+                <a href="https://simple-veganista.com/">Simple Veganista</a>
+                <a href="https://www.tropicaltidbits.com/">Tropical Tidbits</a>
+            </div>
 
-<script src="main.js"></script>
-</body>
+            <div class="section">
+                <h2>Game Dev</h2>
+                <a href="https://itch.io/game-assets">Itch.io Assets</a>
+                <a href="https://lospec.com/">Lospec Color Palette</a>
+            </div>
+
+            <div class="section">
+                <h2>Hosting</h2>
+                <a href="https://galaxygate.net/">Galaxy Gate</a>
+                <a href="https://www.digitalocean.com/">Digital Ocean</a>
+                <a href="https://www.name.com/">Name.com</a>
+                <a href="https://www.namecheap.com/">NameCheap</a>
+            </div>
+
+            <div class="section">
+                <h2>Software</h2>
+                <a href="https://www.jetbrains.com/">JetBrains</a>
+                <a href="https://chocolatey.org/">Chocolatey</a>
+                <a href="https://www.bfxr.net/">Bfxr</a>
+                <a href="https://www.gitkraken.com/">GitKraken</a>
+                <a href="https://www.getblackbird.net/">Blackbird</a>
+                <a href="https://ankiweb.net/decks/">Anki</a>
+                <a href="https://www.strava.com/">Strava</a>
+            </div>
+
+            <div class="section">
+                <h2>Learning</h2>
+                <a href="https://www.khanacademy.org/">Khan Academy</a>
+                <a href="https://www.patreon.com/japaneseammo/posts">Misa (Japanese)</a>
+            </div>
+
+            <div id="closing-section" class="section">
+                <h2>Other</h2>
+                <a href="https://fonts.google.com/">Google Fonts</a>
+                <a href="https://fontpair.co/">FontPair</a>
+                <a href="https://css-tricks.com/">CSS Tricks</a>
+                <a href="https://app.gitkraken.com/glo/">Glo Board</a>
+            </div>
+        </main>
+
+        <script src="main.js"></script>
+    </body>
 </html>
