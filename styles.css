@@ -11,6 +11,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16pt;
     height: 100%;
+    padding: 4px;
 }
 
 a {
@@ -18,7 +19,8 @@ a {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: 'Roboto Slab', serif;
 }
 
@@ -51,7 +53,7 @@ main {
 .section {
     width: 30%;
     padding: 10px;
-    border: 1px grey solid;
+    border: 2px grey solid;
     text-align: center;
 }
 
