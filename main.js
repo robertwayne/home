@@ -11,3 +11,29 @@ function setGreeting() {
         return 'evening'
     }
 }
+
+function queryServiceHealth() {
+    const sites = ["spelldrop.gg", "sombia.com"]
+
+    for (const site of sites) {
+        const element = document.getElementById(site)
+        fetch(`https://${site}/api/v1/health`).then(response => {
+            if (response.status === 200) {
+                element.classList.remove('service-down')
+                element.classList.add('service-up')
+                element.innerHTML = 'up'
+            } else {
+                element.classList.remove('service-up')
+                element.classList.add('service-down')
+                element.innerHTML = 'down'
+            }
+        }).catch(_ => { 
+            element.classList.remove('service-up')
+            element.classList.add('service-down')
+            element.innerHTML = 'down'
+        })
+    }
+}
+
+queryServiceHealth()
+setInterval(queryServiceHealth, 30000)

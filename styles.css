@@ -67,6 +67,24 @@ main {
     padding-bottom: 5px;
 }
 
+.service-down {
+    color: #ce4545;
+}
+
+.service-up {
+    color: #4caf50;
+}
+
+.service-container {
+    width: 92%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-self: center;
+    padding: 6px;
+}
+
 #closing-section {
     width: 92%;
 }
