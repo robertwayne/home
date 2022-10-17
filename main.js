@@ -13,7 +13,7 @@ function setGreeting() {
 }
 
 function queryServiceHealth() {
-    const sites = ['spelldrop.gg', 'sombia.com', 'petrock.gg']
+    const sites = ['spelldrop.gg', 'sombia.com']
 
     for (const site of sites) {
         const element = document.getElementById(site)
