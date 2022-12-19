@@ -12,30 +12,56 @@ function setGreeting() {
     }
 }
 
-function queryServiceHealth() {
+function setServiceHealthUp(element) {
+    element.classList.remove("service-down")
+    element.classList.add("service-up")
+    element.innerHTML = "up"
+}
+
+function setServiceHealthDown(element) {
+    element.classList.remove("service-up")
+    element.classList.add("service-down")
+    element.innerHTML = "down"
+}
+
+function updateServiceHealth() {
     const sites = ["spelldrop.gg", "sombia.com"]
+
+    let cachedLastChecked = localStorage.getItem("lastChecked")
+    let lastChecked = new Date(cachedLastChecked)
 
     for (const site of sites) {
         const element = document.getElementById(site)
+
+        if (cachedLastChecked && lastChecked > new Date() - 300000) {
+            let cachedHealth = localStorage.getItem(`${site}-health`)
+            if (cachedHealth === "true") {
+                setServiceHealthUp(element)
+            } else {
+                setServiceHealthDown(element)
+            }
+
+            continue
+        }
+
         fetch(`https://${site}/api/v1/health`)
             .then((response) => {
                 if (response.status === 200) {
-                    element.classList.remove("service-down")
-                    element.classList.add("service-up")
-                    element.innerHTML = "up"
+                    setServiceHealthUp(element)
+                    localStorage.setItem(`${site}-health`, true)
                 } else {
-                    element.classList.remove("service-up")
-                    element.classList.add("service-down")
-                    element.innerHTML = "down"
+                    setServiceHealthDown(element)
+                    localStorage.setItem(`${site}-health`, false)
                 }
             })
             .catch((_) => {
-                element.classList.remove("service-up")
-                element.classList.add("service-down")
-                element.innerHTML = "down"
+                setServiceHealthDown(element)
+                localStorage.setItem(`${site}-health`, false)
             })
     }
+
+    localStorage.setItem("lastChecked", new Date().toLocaleString())
 }
 
-queryServiceHealth()
-setInterval(queryServiceHealth, 300000)
+updateServiceHealth()
+setInterval(updateServiceHealth, 300000)
