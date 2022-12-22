@@ -12,7 +12,7 @@ function setGreeting() {
     }
 }
 
-function setServiceHealthUp(element) {
+function setServiceHealthUp(site, element) {
     element.classList.remove("service-down")
     element.classList.add("service-up")
     element.innerHTML = "up"
@@ -20,7 +20,7 @@ function setServiceHealthUp(element) {
     localStorage.setItem(`${site}-health`, "up")
 }
 
-function setServiceHealthDown(element) {
+function setServiceHealthDown(site, element) {
     element.classList.remove("service-up")
     element.classList.add("service-down")
     element.innerHTML = "down"
