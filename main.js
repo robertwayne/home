@@ -16,12 +16,16 @@ function setServiceHealthUp(element) {
     element.classList.remove("service-down")
     element.classList.add("service-up")
     element.innerHTML = "up"
+
+    localStorage.setItem(`${site}-health`, "up")
 }
 
 function setServiceHealthDown(element) {
     element.classList.remove("service-up")
     element.classList.add("service-down")
     element.innerHTML = "down"
+
+    localStorage.setItem(`${site}-health`, "down")
 }
 
 function updateServiceHealth() {
@@ -35,10 +39,10 @@ function updateServiceHealth() {
 
         if (cachedLastChecked && lastChecked > new Date() - 300000) {
             let cachedHealth = localStorage.getItem(`${site}-health`)
-            if (cachedHealth === "true") {
-                setServiceHealthUp(element)
+            if (cachedHealth === "up") {
+                setServiceHealthUp(site, element)
             } else {
-                setServiceHealthDown(element)
+                setServiceHealthDown(site, element)
             }
 
             continue
@@ -47,16 +51,13 @@ function updateServiceHealth() {
         fetch(`https://${site}/api/v1/health`)
             .then((response) => {
                 if (response.status === 200) {
-                    setServiceHealthUp(element)
-                    localStorage.setItem(`${site}-health`, true)
+                    setServiceHealthUp(site, element)
                 } else {
-                    setServiceHealthDown(element)
-                    localStorage.setItem(`${site}-health`, false)
+                    setServiceHealthDown(site, element)
                 }
             })
             .catch((_) => {
-                setServiceHealthDown(element)
-                localStorage.setItem(`${site}-health`, false)
+                setServiceHealthDown(site, element)
             })
     }
 
