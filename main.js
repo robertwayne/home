@@ -48,7 +48,7 @@ function updateServiceHealth() {
             continue
         }
 
-        fetch(`https://${site}/api/v1/health`)
+        fetch(`https://${site}/api/health`)
             .then((response) => {
                 if (response.status === 200) {
                     setServiceHealthUp(site, element)
