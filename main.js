@@ -29,7 +29,7 @@ function setServiceHealthDown(site, element) {
 }
 
 function updateServiceHealth() {
-    const sites = ["spelldrop.gg", "sombia.com"]
+    const sites = ["playspelldrop.com", "sombia.com"]
 
     let cachedLastChecked = localStorage.getItem("lastChecked")
     let lastChecked = new Date(cachedLastChecked)
@@ -48,7 +48,7 @@ function updateServiceHealth() {
             continue
         }
 
-        fetch(`https://${site}/api/health`)
+        fetch(`https://${site}/`)
             .then((response) => {
                 if (response.status === 200) {
                     setServiceHealthUp(site, element)
